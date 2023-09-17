@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="container">
+
+    <h1>PASSWORD GENERATOR</h1>
+
+    <!-- display section -->
+    <div class="display-container">
+       
+        <input readonly placeholder="Password" class="display" data-passwordDisplay>
+        <!-- data-passwordDisplay is use for fetching display in js  -->
+        <button class="copybtn"data-copy>
+            <span class="copied" data-copyMsg></span>
+            <!-- <img src="./asset/copy.jpg" alt="copy" height="23px" width="23px"> -->
+            <!-- <i class="fa-solid fa-clipboard fa-flip"></i> -->
+            <i class="fa-regular fa-copy fa-xl" style="color: #d1d9e6;"></i>
+         
+        </button>
+
+    </div>
+
+ 
+    <div class="input-container">
+
+     <!-- password length section -->
+        <div class="length-container">
+            <p class="length">Password Length</p>
+            <p data-lengthNumber class="number">0</p>
+        </div>
+    
+     <!-- slider -->
+     <input type="range" min="1" max="20" step="1" class="slider" data-lengthSlider>
+     <!-- data-lengthSlider is a custom attribut to fetch in js because when we slide data-lengthNumber increases -->
+     
+     <!-- checkbox -->
+     <div class="check">
+         <input type="checkbox" id="uppercase">
+         <label for="uppercase">Include Uppercase Letter</label>
+     </div>
+ 
+     <div class="check">
+         <input type="checkbox" id="lowercase">
+         <label for="lowercase">Include Lowercase Letter</label>
+     </div>
+ 
+     <div class="check">
+         <input type="checkbox" id="numbers">
+         <label for="numbers">Include Numbers</label>
+     </div>
+ 
+     <div class="check">
+         <input type="checkbox" id="symbols">
+         <label for="symbols">Include Symbols</label>
+     </div>
+
+     <!-- strength section -->
+     <div class="strength-container">
+        <p>Strength</p>
+        <div data-indicator class="indicator"></div>
+     </div>
+
+     <!-- submit button -->
+     <div>
+     <button class="generateButton">Generate Password</button>
+     </div>
+     
+    </div>
+   
+    <div class="name">Designed and programmed by
+        Vivek Kumar Mishra
+    </div>
+
+</div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/beaa449087.js" crossorigin="anonymous"></script>
+</body>
+</html>
